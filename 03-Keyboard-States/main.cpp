@@ -43,6 +43,19 @@ class CSampleKeyHander: public CKeyEventHandler
 	virtual void OnKeyUp(int KeyCode);
 };
 
+class Bird : public GameObject
+{
+	int speed;
+	string color;
+
+public:
+	void Fly(){cout<<"Bird is flying with velocity "<<vx;} // Bird is
+	void Jump(){cout<<"jump";}
+	void Eat(){cout<<"Eat fish";}
+
+	~Bird();
+}
+
 CSampleKeyHander * keyHandler; 
 
 void CSampleKeyHander::OnKeyDown(int KeyCode)
@@ -151,8 +164,6 @@ void Update(DWORD dt)
 	mario->Update(dt);
 }
 
-/*
-	Render a frame 
 */
 void Render()
 {
